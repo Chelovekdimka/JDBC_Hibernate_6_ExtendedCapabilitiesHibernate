@@ -1,0 +1,18 @@
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect"> org.hibernate.dialect.MySQLDialect </property>
+        <property name="hibernate.connection.driver_class"> com.mysql.jdbc.Driver </property>
+        <!--  Assume students is the database name  -->
+        <property name="hibernate.connection.url"> jdbc:mysql://localhost:3306/library?serverTimezone=UTC </property>
+        <property name="hibernate.connection.username"> root </property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.hbm2ddl.auto"> update </property>
+        <property name="hibernate.show_sql"> true </property>
+        <property name="hibernate.format_sql"> true </property>
+        <property name="use_sql_comments"> true </property>
+        <mapping class="ex_002_select_where.entity.Author"/>
+        <mapping class="ex_002_select_where.entity.Book"/>
+
+    </session-factory>
+</hibernate-configuration>
